@@ -110,7 +110,7 @@ UsersCtrl.prototype.configureGrid=function($scope){
         columnDefs: [
 				{field:'', displayName:'Action', width:actionWidth,	cellTemplate:'<div style="position:relative;top:4px;padding-left:2px"><button ng-show="auth.update"  ng-click="editItem(row)" class="btn btn-primary btn-mini" ><i class="icon-edit icon-white"></i> Edit</button>&nbsp;<button ng-show="auth.delete" ng-click="deleteItem(row)" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Delete</button> </div>'
 				}
-								,{field: 'UserName', displayName: 'UserName'}
+                ,{field: 'UserName', displayName: 'UserName'}
 				,{field: 'FirstName', displayName: 'FirstName'}
 				,{field: 'LastName', displayName: 'LastName'}
 				,{field: 'Email', displayName: 'Email'}
@@ -128,6 +128,8 @@ UsersCtrl.prototype.configureGrid=function($scope){
 		pagingOptions: $scope.pagingOptions
 	};
 };
+
+
 UsersCtrl.prototype.searchPopup=function($scope){
 	$scope.showForm=function(){$scope.fgShowHide=false; $scope.item=null;};
 	$scope.hideForm=function(){$scope.fgShowHide=true;};
@@ -138,5 +140,5 @@ UsersCtrl.prototype.searchPopup=function($scope){
 		$scope.searchDialog=false;
 	};	
 	$scope.refreshSearch=function(){$scope.search=null;};
-	
 };
+

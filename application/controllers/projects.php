@@ -12,7 +12,7 @@ class Projects extends base_ctrl {
 		$result=$this->model->get_navigations($this->auth->RoleId, $this->user->UserId);
 		$menu=$this->get_menu($result);
 		
-		$this->load->view('layout', array('menu'=>$menu));
+		$this->load->view('layout_backend', array('menu'=>$menu));
 	}
 	private function get_menu($res){
 	//NavigationId, NavName, NavOrder,ParentNavId,ActionPath
